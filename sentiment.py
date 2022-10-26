@@ -8,8 +8,7 @@ import matplotlib.pyplot as plt
 text = open("datas/read.txt", encoding="utf-8").read()
 text = text.lower()
 print(type(text)) # <class 'str'>
-# translate: metindeki string.punctuation olan ifadeleri atma
-# maketrans: kucuk harfleri bir metne donusturmeye calısan fonksiyon(translate islemine yardımcı olur)
+
 cleaned_text = text.translate(str.maketrans("","",string.punctuation))
 #print(cleaned_text)
 tokenized_words = word_tokenize(cleaned_text) # cümleyi kelimelere ayırma
